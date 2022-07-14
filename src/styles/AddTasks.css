@@ -1,0 +1,79 @@
+.add-task-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+}
+.img-container {
+    width: 50%;
+}
+.img-add-task {
+    width: 100%;
+    border-radius: 10px;
+}
+.form-add-task-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.form-add-task {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-title {
+    margin-bottom: 10px;
+}
+.form-nav {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.form-nav label {
+    width: 10%;
+    margin-bottom: 10px;
+}
+.add-task-input {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #eee;
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.add-task-textarea {
+    width: 100%;
+    height: 80px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #eee;
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+.add-task-button-container {
+    width: 90%;
+}
+.error {
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 5px;
+    width: 100%;
+    height: 25px;
+    color: red;
+    text-align: flex-start;
+    font-family: sans-serif;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.errorHidden {
+    background-color: #fff;
+}

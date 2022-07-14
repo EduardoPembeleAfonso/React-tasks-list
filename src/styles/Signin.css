@@ -1,0 +1,41 @@
+.signinContainer {
+    height: 50vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+.titleForm {
+    align-self: center;
+    font-size: 50px;
+}
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px
+}
+.email, .password, .emailClick {
+    width: 70%;
+    height: 40px;
+    text-align: center;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px thin darkgrey;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.button-signin {
+    width: 70%;
+    height: 40px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: red;
+}
+.forgot-password {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}

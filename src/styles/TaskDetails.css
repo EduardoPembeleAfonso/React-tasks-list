@@ -1,0 +1,51 @@
+.details-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(241, 238, 238);
+}
+.task-details-container {
+    background-color: rgb(241, 238, 238);
+    margin: 15px 0;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    border-radius: 5px;
+}
+.task-details-container h2 {
+    margin-bottom: 5px;
+    color: #000;
+}
+.close-button-container button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    margin-top: 10px;
+    background-color: blue;
+    color: #fff;
+    border: none;
+    height: 20px;
+    padding: 0 10px;
+    border-radius: 4px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.close-button-container button:hover {
+    background-color: #fff;
+    color: blue;
+}
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 1500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+    opacity: 0;
+}
