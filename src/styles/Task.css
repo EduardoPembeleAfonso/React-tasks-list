@@ -1,7 +1,7 @@
 .task-container {
     background-color: rgb(241, 238, 238);
     margin: 8px 0;
-    padding: 15px 20px;
+    padding: 15px 0;
     display: flex;
     border-radius: 5px;
     justify-content: space-between;
@@ -10,6 +10,7 @@
 }
 .task-title {
     cursor: pointer;
+    padding: 0 20px;
 }
 .remove-task-button {
     background-color: rgb(241, 238, 238);
@@ -28,3 +29,35 @@
 .task-details-container {
     background-color: #fff;
 }
+
+@media screen and (max-width: 620px) {
+    .button-container {
+        display: flex;
+        flex-direction: row;
+    }
+    .remove-task-button {
+        font-size: 16px;
+        margin: 0 5px;
+    }
+    .see-task-details-button {
+        font-size: 16px;
+        margin: 0 5px;
+    }
+
+  }
+
+  @media screen and (max-width: 320px) {
+    .button-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .remove-task-button {
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    .see-task-details-button {
+        font-size: 16px;
+        margin-right: 10px;
+        margin-bottom: 5px;
+    }
+  }

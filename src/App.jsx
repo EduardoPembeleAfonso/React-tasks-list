@@ -1,15 +1,26 @@
-import React, { useState } from 'react';
-import {v4 as uuidv4} from 'uuid';
+import React from 'react';
+import Lottie from 'react-lottie';
 
 import { useUserContext } from './context/userContext';
 
+// componentes
 import Index from './components/Index';
 import Auth from './components/Auth';
+
+// Lottie json
+import progress from './lottie/72212-loading.json';
+
+// estilos
 import './App.css';
 
 const App = () => {
 
   const { loading, error, user } = useUserContext();
+  const lottieOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: progress
+  }
 
   return (
         <div className='appContainer'>
@@ -17,7 +28,7 @@ const App = () => {
             error && <p> {error} </p>
           }
           {
-            loading ? <h2>Loading...</h2> : 
+            loading ? <Lottie options={lottieOptions} width={400} height={400} /> : 
             <>
               {
                 user ? < Index /> : < Auth />

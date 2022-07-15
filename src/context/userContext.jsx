@@ -27,15 +27,9 @@ export const UserContextProvider = ({ children }) => {
     }, []);
 
     // função que registra um novo usuario na bd
-    const registerUser = (email, name, password) => {
+    const registerUser = (email, password) => {
         setLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
-            .then( () => {
-                return updateProfile( auth.currentUser, {
-                    displayName: name,
-                } )
-
-            } )
                 .then( ( res ) => {} )
                 .catch( ( err ) => setError(err.message) )
                 .finally( () => setLoading(false) );

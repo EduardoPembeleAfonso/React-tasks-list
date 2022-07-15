@@ -30,7 +30,6 @@ const Header = () => {
                     <h1>Minhas Tarefas</h1>
                 </div>
                 <div className="div-button-add-task">
-                    <button className="button-add-task"> <MdDeleteForever /> </button>
                     <button className="button-add-task" onClick={handleAddTaskButton}> <CgAddR /> </button>
                 </div>
             </div>

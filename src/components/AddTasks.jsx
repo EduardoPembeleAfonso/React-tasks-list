@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { collection, addDoc, Timestamp, } from 'firebase/firestore';
 import { db } from '../firebase';
+import { useUserContext } from '../context/userContext';
 
 // styles
 import '../styles/AddTasks.css';
@@ -20,6 +21,10 @@ const AddTasks = ({handleTaskEdition}) => {
     const [errorTitle, setErrorTitle] = useState(false);
     const [errorDescription, setErrorDescription] = useState(false);
 
+    // context
+
+    const { user } = useUserContext();
+
     //functions
     // função que adiciona uma nova tarefa na bd
     const handleAddTaskClick = async (e) => {
@@ -36,8 +41,13 @@ const AddTasks = ({handleTaskEdition}) => {
                     title: title,
                     description: description,
                     completed: completed,
+                    userId: user.uid,
                     created: Timestamp.now()
                 } );
+
+                setTitle("");
+                setDescription("");
+                setCompleted("");
             }
         } catch (error) {
             console.log('error in handleAddTaskClick : ', error);

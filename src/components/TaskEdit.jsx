@@ -39,6 +39,8 @@ const TaskEdit = ({task}) => {
                     description: description,
                     created: Timestamp.now()
                 } );
+                setTitle("");
+                setDescription("");
             }
         } catch (error) {
             console.log('error in handleEditTaskClick : ', error);

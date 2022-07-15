@@ -13,9 +13,8 @@ const Signup = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     const email = emailRef.current.value;
-    const name = nameRef.current.value;
     const password = psdRef.current.value;
-    if (email && password && name) registerUser(email, password, name);
+    if (email && password) registerUser(email, password);
   };
 
   return (
