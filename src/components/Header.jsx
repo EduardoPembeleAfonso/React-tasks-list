@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import {CgAddR} from 'react-icons/cg';
-import {MdDeleteForever} from 'react-icons/md';
 import { useUserContext } from '../context/userContext';
 
 // estilos

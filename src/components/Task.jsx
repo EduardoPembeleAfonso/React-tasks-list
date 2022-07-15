@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Modal from 'react-modal';
 import { deleteDoc, updateDoc, doc} from 'firebase/firestore';
 import { db } from '../firebase';
-import {useNavigate, useParams} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 // icones
 import { CgClose, CgInfo, CgPen } from 'react-icons/cg';
@@ -17,7 +17,6 @@ const Task = ({ task }) => {
 
     // navigate e params
     const navigate = useNavigate();
-    const { id } = useParams();
 
 
     // função que chama o modal

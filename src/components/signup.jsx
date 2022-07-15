@@ -6,7 +6,6 @@ import '../styles/Signin.css';
 
 const Signup = () => {
   const emailRef = useRef();
-  const nameRef = useRef();
   const psdRef = useRef();
   const { registerUser } = useUserContext();
 

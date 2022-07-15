@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import {v4 as uuidv4} from 'uuid';
-import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-dom';
-import { collection, query, orderBy, onSnapshot, where, getDocs } from 'firebase/firestore';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { collection, query, orderBy, onSnapshot, where } from 'firebase/firestore';
 import { useUserContext } from '../context/userContext';
 import { db } from '../firebase';
 
@@ -20,23 +19,19 @@ const App = () => {
 
   // context
   const { user } = useUserContext();
-
-  // parametros
-  const { id } = useParams();
     
 
   // hook que pega todas as tarefas da minha base de dados (bd)
   useEffect( () => {   
+    const id = user.uid;
     const collectionRef = collection(db, 'tasks');
-    const q = query( collectionRef, where("userId", "==", user.uid), orderBy('created', 'desc') );
+    const q = query( collectionRef, where("userId", "==", id), orderBy('created', 'desc') );
     onSnapshot( q, (querySnapshot) => {
-      //if (q.data.userId === user.uid) {
       setTask( querySnapshot.docs.map( doc => ({
         id: doc.id,
         data: doc.data()
       }) ) )
 
-    //}
 
     } )
 

@@ -12,11 +12,6 @@ const Header = () => {
     // navigate - navegação
     const navigate = useNavigate();
 
-    // função que me leva pra rota de adicionar tarefa
-    const handleAddTaskButton = () => {
-        navigate('/add-task');
-    }
-
     // função que me leva de volta pra a pagina home
     const handleClickButtonVoltar = () => {
         navigate('/');
