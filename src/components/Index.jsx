@@ -16,16 +16,17 @@ const App = () => {
 
   // estados
   const [tasks, setTask] = useState([]);
+  const [users, setUsers] = useState("");
 
   // context
+  const { user } = useUserContext();
   
   
   // hook que pega todas as tarefas da minha base de dados (bd)
   useEffect( () => {   
-    const { user } = useUserContext();
-    const id = user.uid;
+    setUsers(user.uid)
     const collectionRef = collection(db, 'tasks');
-    const q = query( collectionRef, where("userId", "==", id), orderBy('created', 'desc') );
+    const q = query( collectionRef, where("userId", "==", users), orderBy('created', 'desc') );
     onSnapshot( q, (querySnapshot) => {
       setTask( querySnapshot.docs.map( doc => ({
         id: doc.id,
