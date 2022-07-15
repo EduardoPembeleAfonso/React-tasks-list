@@ -29,7 +29,7 @@
 }
 .div-button-add-task, .div-button-add-task-voltar {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: flex-end;
 }
 

@@ -18,11 +18,11 @@ const App = () => {
   const [tasks, setTask] = useState([]);
 
   // context
-  const { user } = useUserContext();
-    
-
+  
+  
   // hook que pega todas as tarefas da minha base de dados (bd)
   useEffect( () => {   
+    const { user } = useUserContext();
     const id = user.uid;
     const collectionRef = collection(db, 'tasks');
     const q = query( collectionRef, where("userId", "==", id), orderBy('created', 'desc') );
