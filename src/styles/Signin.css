@@ -45,10 +45,7 @@
         width: 100%;
     }
     .email, .password, .emailClick {
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-bottom: 1px thin darkgrey;
+        border: 1px thin darkgrey;
         margin-bottom: 20px;
         border-radius: 5px;
     }
@@ -60,10 +57,7 @@
         width: 100%;
     }
     .email, .password, .emailClick {
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-bottom: 2px solid darkgrey;
+        border: 1px solid darkgrey;
         margin-bottom: 20px;
         border-radius: 5px;
     }
