@@ -46,7 +46,5 @@ jobs:
         run: ls -R
         working-directory: path/to/artifact
 
-        with:
-          args: deploy --only hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
