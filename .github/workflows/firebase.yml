@@ -38,10 +38,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Download Build
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: build
           path: build
+          run: ls -R
       - name: Depoy to Firebase
         uses: w9jds/firebase-action@master
         with:
