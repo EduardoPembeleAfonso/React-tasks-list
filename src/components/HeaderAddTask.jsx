@@ -21,7 +21,6 @@ const Header = () => {
         <>
             <div className="header">
                 <div className="topHeader">
-                    <h1>{ user.email }</h1>
                     <div className="div-button-add-task-voltar">
                         <button className="button-add-task-voltar" onClick={handleClickButtonVoltar}> Voltar </button>
                         <button onClick={logoutUser} className="logout-add-task">Sair</button>
