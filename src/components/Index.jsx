@@ -16,7 +16,6 @@ const App = () => {
   
   // estados
   const [tasks, setTask] = useState([]);
-  const [users, setUsers] = useState("");
   
   // context
   const { user } = useUserContext();
