@@ -42,9 +42,10 @@ jobs:
         with:
           name: build
           path: build
-     - name: Display structure of downloaded files
+      - name: Display structure of downloaded files
         run: ls -R
-        working-directory: build
+        working-directory: path/to/artifact
+
         with:
           args: deploy --only hosting
         env:
