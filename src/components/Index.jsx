@@ -13,31 +13,31 @@ import TaskEdit from './TaskEdit';
 import '../App.css';
 
 const App = () => {
-
+  
   // estados
   const [tasks, setTask] = useState([]);
   const [users, setUsers] = useState("");
-
+  
   // context
   const { user } = useUserContext();
   
   
   // hook que pega todas as tarefas da minha base de dados (bd)
-  useEffect( () => {   
-    setUsers(user.uid)
+  useEffect( () => {
     const collectionRef = collection(db, 'tasks');
-    const q = query( collectionRef, where("userId", "==", users), orderBy('created', 'desc') );
+    const q = query( collectionRef, where("userId", "==", user.uid), orderBy('created', 'desc') );
     onSnapshot( q, (querySnapshot) => {
       setTask( querySnapshot.docs.map( doc => ({
         id: doc.id,
         data: doc.data()
       }) ) )
+      // eslint-disable-next-line react-hooks/exhaustive-deps
 
 
     } )
 
     console.log('q :', q);
-  }, [] );
+  }, [] ); // eslint-disable-line react-hooks/exhaustive-deps
 
 
   return (
