@@ -19,10 +19,7 @@
     width: 70%;
     height: 40px;
     text-align: center;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px thin darkgrey;
+    border: 1px thin darkgrey;
     margin-bottom: 20px;
     border-radius: 5px;
 }
@@ -44,27 +41,11 @@
     .signinContainer {
         width: 100%;
     }
-    .email, .password, .emailClick {
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-bottom: 1px thin darkgrey;
-        margin-bottom: 20px;
-        border-radius: 5px;
-    }
 
 }
 
 @media screen and (max-width: 320px) {
     .signinContainer {
         width: 100%;
-    }
-    .email, .password, .emailClick {
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-bottom: 2px solid darkgrey;
-        margin-bottom: 20px;
-        border-radius: 5px;
     }
 }
