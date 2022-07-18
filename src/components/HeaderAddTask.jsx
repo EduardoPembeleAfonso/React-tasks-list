@@ -7,7 +7,7 @@ import '../styles/Header.css';
 
 const Header = () => {
     // context 
-    const { user, logoutUser } = useUserContext();
+    const {logoutUser } = useUserContext();
 
     // navigate - navegação
     const navigate = useNavigate();
