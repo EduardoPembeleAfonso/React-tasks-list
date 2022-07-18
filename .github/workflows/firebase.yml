@@ -41,10 +41,10 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: build
-          path: C:\EstudosReactjs\projecto2\build
+          path: build
       - name: Display structure of downloaded files
         - run: ls -R
-          working-directory: C:\EstudosReactjs\projecto2\build
+          working-directory: build
       - name: Depoy to Firebase
         uses: w9jds/firebase-action@master
         with:
