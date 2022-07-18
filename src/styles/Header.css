@@ -17,15 +17,18 @@
     border: none;
     border-radius: 5px;
     margin-right: 2px;
-    background-color: blue;
+    background-color: rgb(134, 59, 255);
     transition: all 0.5s ease;
 }
 .logout:hover, .logout-add-task:hover , .button-add-task:hover, .button-add-task-voltar:hover {
     background-color: rgb(241, 238, 238);
-    color: blue;
+    color: rgb(134, 59, 255);
 }
 .title-my-tasks {
     margin-top: 10px;
+}
+.button-add-task {
+    width: 20%;
 }
 .div-button-add-task, .div-button-add-task-voltar {
     display: flex;
@@ -40,10 +43,11 @@
     }
     .topHeader {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
     }
     .logout {
-        width: 100%;
+        width: 10%;
     }
     .logout-add-task, .button-add-task-voltar {
         width: 50%;
@@ -60,10 +64,11 @@
   @media screen and (max-width: 320px) {
     .topHeader {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
     }
     .logout {
-        width: 100%;
+        width: 10%;
     }
     .div-button-add-task {
         margin-top: 10px;

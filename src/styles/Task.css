@@ -3,9 +3,10 @@
     margin: 8px 0;
     padding: 15px 0;
     display: flex;
-    border-radius: 5px;
+    border-radius: 8px;
     justify-content: space-between;
-    color: blue;
+    color: #000;
+    font-weight: bold;
     align-items: center;
 }
 .task-title {
@@ -16,14 +17,14 @@
     background-color: rgb(241, 238, 238);
     border: none;
     font-size: 24px;
-    color: blue;
+    color: rgb(134, 59, 255);
     margin: 0 15px;
 }
 .see-task-details-button {
     background-color: rgb(241, 238, 238);
     border: none;
     font-size: 24px;
-    color: blue;
+    color: rgb(134, 59, 255);
     margin: 0 15px;
 }
 .task-details-container {

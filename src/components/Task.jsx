@@ -103,7 +103,7 @@ const Task = ({ task }) => {
 //styles
 
 const completedTrue = {
-    borderLeft: '6px solid chartreuse',
+    borderLeft: '6px solid #07f547',
 }
 const completedFalse = {
     borderLeft: '6px solid red',
