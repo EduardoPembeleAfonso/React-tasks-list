@@ -41,10 +41,10 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build
-          path: build
+          path: build/index.html
       - name: Display structure of downloaded files
         run: ls -R
-        working-directory: path/to/artifact
+        working-directory: build/index.html
 
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
