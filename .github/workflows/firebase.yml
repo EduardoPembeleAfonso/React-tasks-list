@@ -42,9 +42,6 @@ jobs:
         with:
           name: build
           path: build
-      - name: Display structure of downloaded files
-        - run: ls -R
-          working-directory: build
       - name: Depoy to Firebase
         uses: w9jds/firebase-action@master
         with:
