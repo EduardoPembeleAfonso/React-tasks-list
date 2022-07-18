@@ -43,7 +43,7 @@ jobs:
           name: build
           path: C:\EstudosReactjs\projecto2\build
       - name: Display structure of downloaded files
-          run: ls -R
+        - run: ls -R
           working-directory: C:\EstudosReactjs\projecto2\build
       - name: Depoy to Firebase
         uses: w9jds/firebase-action@master
