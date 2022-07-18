@@ -9,7 +9,7 @@ import '../styles/Header.css';
 const Header = () => {
     const date = new Date();
 
-    const monName = new Array ("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
+    const monName = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
     const today = date.getDate();
     const month = date.getMonth();
     // context
