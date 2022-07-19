@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Modal from 'react-modal';
+import Lottie from 'react-lottie';
 import { deleteDoc, updateDoc, doc} from 'firebase/firestore';
 import { db } from '../firebase';
 import {useNavigate} from 'react-router-dom';
@@ -7,6 +8,8 @@ import {useNavigate} from 'react-router-dom';
 // icones
 import { CgClose, CgInfo, CgPen } from 'react-icons/cg';
 
+// Lottie json
+import deleteLottie from '../lottie/61000-loading-sucess.json';
 // estilos
 import "../styles/Task.css";
 import "../styles/TaskDetails.css";
@@ -14,10 +17,16 @@ import "../styles/TaskDetails.css";
 const Task = ({ task }) => {
     // states
     const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [autoplay, setAutoplay] = useState(false);
 
     // navigate e params
     const navigate = useNavigate();
 
+    const lottieOptions = {
+        loop: false,
+        autoplay: autoplay,
+        animationData: deleteLottie
+      }
 
     // função que chama o modal
     const handleTaskDetailsClick = () => {
@@ -25,11 +34,12 @@ const Task = ({ task }) => {
     }
 
     // função que apaga uma tarefa
-    const handleTaskDelete = async () => {
-        const id = task.id;
+    const handleTaskDelete = async (taskId) => {
+        const id = taskId;
         const taskDoc = doc(db, 'tasks', id);
         try {
-            await deleteDoc(taskDoc);
+            await setAutoplay(true);
+            setTimeout(() => deleteDoc(taskDoc), 3300);
         } catch (error) {
             console.log('error in handleTaskDelete : ', error);
         }
@@ -76,7 +86,9 @@ const Task = ({ task }) => {
             <div className='button-container'>
                 <button className="see-task-details-button" onClick={ handleTaskDetailsClick } > <CgInfo /> </button>
                 <button className="see-task-details-button" onClick={ () => handleTaskEdit(task.id) } > <CgPen /> </button>
-                <button className='remove-task-button' onClick={ () => handleTaskDelete(task.id) }> <CgClose /> </button>
+                <button className='remove-task-button' onClick={ () => handleTaskDelete(task.id) }> 
+                   { autoplay ? <Lottie options={lottieOptions} width={50} height={50} /> :  <CgClose />  }
+                </button>
             </div>
 
             <Modal

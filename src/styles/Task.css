@@ -13,12 +13,18 @@
     cursor: pointer;
     padding: 0 20px;
 }
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 .remove-task-button {
     background-color: rgb(241, 238, 238);
     border: none;
     font-size: 24px;
     color: rgb(134, 59, 255);
-    margin: 0 15px;
+    margin: 0 10px;
 }
 .see-task-details-button {
     background-color: rgb(241, 238, 238);
@@ -38,11 +44,11 @@
     }
     .remove-task-button {
         font-size: 16px;
-        margin: 0 5px;
+        margin-right: 10px;
     }
     .see-task-details-button {
         font-size: 16px;
-        margin: 0 5px;
+        margin: 0 10px;
     }
 
   }

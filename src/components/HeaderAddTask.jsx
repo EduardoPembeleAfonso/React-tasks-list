@@ -6,6 +6,11 @@ import { useUserContext } from '../context/userContext';
 import '../styles/Header.css';
 
 const Header = () => {
+    const date = new Date();
+
+    const monName = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+    const today = date.getDate();
+    const month = date.getMonth();
     // context 
     const {logoutUser } = useUserContext();
 
@@ -21,6 +26,9 @@ const Header = () => {
         <>
             <div className="header">
                 <div className="topHeader">
+                <div>
+                    <h1>{monName[month]}, {today}</h1>
+                </div>
                     <div className="div-button-add-task-voltar">
                         <button className="button-add-task-voltar" onClick={handleClickButtonVoltar}> Voltar </button>
                         <button onClick={logoutUser} className="logout-add-task">Sair</button>
