@@ -10,6 +10,7 @@ import { CgClose, CgInfo, CgPen } from 'react-icons/cg';
 
 // Lottie json
 import deleteLottie from '../lottie/61000-loading-sucess.json';
+
 // estilos
 import "../styles/Task.css";
 import "../styles/TaskDetails.css";
@@ -22,6 +23,7 @@ const Task = ({ task }) => {
     // navigate e params
     const navigate = useNavigate();
 
+    // opções do lottie
     const lottieOptions = {
         loop: false,
         autoplay: autoplay,

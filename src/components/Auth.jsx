@@ -18,7 +18,9 @@ const Auth = () => {
 
   return (
     <div className="authContainer">
-      {!index ? <Signin index={index} toggleIndex={toggleIndex} /> : <Signup />}
+      <div className="divAuthContainer">
+        {!index ? <Signin index={index} toggleIndex={toggleIndex} /> : <Signup />}
+      </div>
       <p onClick={toggleIndex}>
         {!index ? "Precisa de uma conta ? Click Aqui " : "Já tem uma conta ?"}
       </p>
