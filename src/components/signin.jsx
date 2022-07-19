@@ -1,16 +1,18 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useUserContext } from "../context/userContext";
 
 // estilos
 import '../styles/Signin.css';
 
 const Signin = ({ index, toggleIndex }) => {
+  // states
+  const [errorFPassword, setErrorFPassword] = useState(false);
   // refs
   const emailRef = useRef();
   const psdRef = useRef();
 
   // context
-  const { signInUser, forgotPassword } = useUserContext();
+  const { signInUser, forgotPassword, error, errorSignin } = useUserContext();
 
 
   // função que faz o login
@@ -30,7 +32,7 @@ const Signin = ({ index, toggleIndex }) => {
         emailRef.current.value = "";
       });
     } else {
-      alert('Insira um email pra redifinir a sua senha!');
+      setErrorFPassword(true);
     }
   }
 
@@ -42,6 +44,8 @@ const Signin = ({ index, toggleIndex }) => {
         <h2 className="titleForm"> Login </h2>
         
         <form onSubmit={onSubmit} className="formContainer">
+          <span className={ errorSignin ? 'span-error' : 'span-error-false'} > {error ? error : ''} </span>
+          <span className={ errorFPassword ? 'span-error' : 'span-error-false'} > {errorFPassword ? 'Insira um email pra redifinir a sua senha!' : ''} </span>
           
           <input 
             placeholder="Email" 

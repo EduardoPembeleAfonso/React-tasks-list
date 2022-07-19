@@ -15,6 +15,7 @@ export const UserContextProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState();
     const [error, setError] = useState("");
+    const [errorSignin, setErrorSignin] = useState(false);
 
     useEffect(() => {
         setLoading(true);
@@ -40,7 +41,7 @@ export const UserContextProvider = ({ children }) => {
         setLoading(true);
         signInWithEmailAndPassword(auth, email, password)
             .then( (res) => console.log(res) )
-            .catch( (err) => setError(err.message) )
+            .catch( (err) => {setError(err.message); setErrorSignin(true)} )
             .finally( () => setLoading(false) );
     }
 
@@ -58,6 +59,7 @@ export const UserContextProvider = ({ children }) => {
         user,
         loading,
         error,
+        errorSignin,
         registerUser,
         signInUser,
         logoutUser,

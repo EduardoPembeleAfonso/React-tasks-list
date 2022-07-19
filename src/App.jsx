@@ -25,9 +25,6 @@ const App = () => {
   return (
         <div className='appContainer'>
           {
-            error && <p> {error} </p>
-          }
-          {
             loading ? <Lottie options={lottieOptions} width={400} height={400} /> : 
             <>
               {
