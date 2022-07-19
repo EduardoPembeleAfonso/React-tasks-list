@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { updateDoc, doc, Timestamp, } from 'firebase/firestore';
 import { db } from '../firebase';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 import '../styles/AddTasks.css';
 import img from '../img/img7.jpg';
@@ -18,6 +18,9 @@ const TaskEdit = ({task}) => {
 
     // parametros
     const { id } = useParams();
+
+    // navegação
+    const navigate = useNavigate();
 
     //functions
     // função que edita uma tarefa
@@ -41,6 +44,9 @@ const TaskEdit = ({task}) => {
                 } );
                 setTitle("");
                 setDescription("");
+
+                // depois de editar uma tarefa, volta para a pagina principal
+                navigate('/');
             }
         } catch (error) {
             console.log('error in handleEditTaskClick : ', error);

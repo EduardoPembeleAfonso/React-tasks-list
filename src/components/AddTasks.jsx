@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { collection, addDoc, Timestamp, } from 'firebase/firestore';
 import { db } from '../firebase';
+import { useNavigate } from 'react-router-dom';
 import { useUserContext } from '../context/userContext';
 
 // styles
@@ -22,8 +23,10 @@ const AddTasks = ({handleTaskEdition}) => {
     const [errorDescription, setErrorDescription] = useState(false);
 
     // context
-
     const { user } = useUserContext();
+
+    // navegação
+    const navigate = useNavigate();
 
     //functions
     // função que adiciona uma nova tarefa na bd
@@ -48,6 +51,9 @@ const AddTasks = ({handleTaskEdition}) => {
                 setTitle("");
                 setDescription("");
                 setCompleted("");
+
+                // depois de criar uma tarefa, volta para a pagina principal
+                navigate('/');
             }
         } catch (error) {
             console.log('error in handleAddTaskClick : ', error);

@@ -1,13 +1,19 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useUserContext } from "../context/userContext";
 
 // estilos
 import '../styles/Signin.css';
 
 const Signup = () => {
+  // states
+  const [errorFPassword, setErrorFPassword] = useState(false);
+
+  // refs
   const emailRef = useRef();
   const psdRef = useRef();
-  const { registerUser } = useUserContext();
+
+  // context
+  const { registerUser, error, errorSignin } = useUserContext();
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -23,6 +29,8 @@ const Signup = () => {
         <h2 className="titleForm"> Registrar </h2>
         
         <form onSubmit={onSubmit} className="formContainer">
+          <span className={ errorSignin ? 'span-error' : 'span-error-false'} > {error ? error : ''} </span>
+          <span className={ errorFPassword ? 'span-error' : 'span-error-false'} > {errorFPassword ? 'Insira um email pra redifinir a sua senha!' : ''} </span>
 
             <input 
             placeholder="Email" 
