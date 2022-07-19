@@ -68,7 +68,7 @@
         border-top-right-radius: 10px;
     }
     .forgot-password {
-        margin-right: 40px;
+        margin-right: 65px;
         align-self: end;
     }
 
@@ -77,5 +77,8 @@
 @media screen and (max-width: 320px) {
     .signinContainer {
         width: 90%;
+    }
+    .forgot-password {
+        align-self: center;
     }
 }
