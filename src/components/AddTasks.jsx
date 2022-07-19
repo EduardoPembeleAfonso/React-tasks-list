@@ -77,7 +77,7 @@ const AddTasks = ({handleTaskEdition}) => {
             < Header />
             <div className='add-task-container'>
                 <div className='img-container'>
-                    <img src={img} alt="" className='img-add-task' />
+                    <img src={img} alt="img" className='img-add-task' />
                 </div>
                 <div className='form-add-task-container'>
                     <form className='form-add-task' name='AddTasks'>
