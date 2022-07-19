@@ -15,7 +15,7 @@ import './App.css';
 
 const App = () => {
 
-  const { loading, error, user } = useUserContext();
+  const { loading, user } = useUserContext();
   const lottieOptions = {
     loop: true,
     autoplay: true,

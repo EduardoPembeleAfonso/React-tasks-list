@@ -5,8 +5,6 @@ import { useUserContext } from "../context/userContext";
 import '../styles/Signin.css';
 
 const Signup = () => {
-  // states
-  const [errorFPassword, setErrorFPassword] = useState(false);
 
   // refs
   const emailRef = useRef();
@@ -30,7 +28,6 @@ const Signup = () => {
         
         <form onSubmit={onSubmit} className="formContainer">
           <span className={ errorSignin ? 'span-error' : 'span-error-false'} > {error ? error : ''} </span>
-          <span className={ errorFPassword ? 'span-error' : 'span-error-false'} > {errorFPassword ? 'Insira um email pra redifinir a sua senha!' : ''} </span>
 
             <input 
             placeholder="Email" 
