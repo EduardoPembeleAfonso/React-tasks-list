@@ -5,6 +5,18 @@
     flex-direction: column;
     width: 100%;
     height: 100vh;
+    background-image: url('https://colorlib.com/etc/lf/Login_v4/images/bg-01.jpg?fbclid=IwAR34YZqZZQZMPGeuAx6D7a9qGo7AMVMcY6oozt0efty39rgz0OGeQSxEVSg');
+    background-repeat: no-repeat;
+}
+.toggleIndex {
+    background-color: #fff;
+    height: 10vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .divAuthContainer {
     display: flex;
@@ -15,7 +27,57 @@
 }
 
 @media screen and ( max-height: 620px ) { 
+    
     .divAuthContainer {
-        margin-bottom: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+ }
+
+ @media screen and ( max-height: 320px ) { 
+    .divAuthContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+ }
+
+ @media screen and ( max-width: 620px ) { 
+    
+    .divAuthContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    .toggleIndex {
+        background-color: #fff;
+        height: 10vh;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+ }
+
+ @media screen and ( max-width: 320px ) { 
+    
+    .divAuthContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 90%;
+    }
+    .toggleIndex {
+        background-color: #fff;
+        height: 10vh;
+        width: 81%;
     }
  }

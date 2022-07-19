@@ -21,9 +21,9 @@ const Auth = () => {
       <div className="divAuthContainer">
         {!index ? <Signin index={index} toggleIndex={toggleIndex} /> : <Signup />}
       </div>
-      <p onClick={toggleIndex}>
+      <div onClick={toggleIndex} className="toggleIndex">
         {!index ? "Precisa de uma conta ? Click Aqui " : "Já tem uma conta ?"}
-      </p>
+      </div>
     </div>
   );
 };

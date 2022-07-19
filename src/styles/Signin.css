@@ -4,6 +4,8 @@
     display: flex;
     flex-direction: column;
     background-color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 .titleForm {
     align-self: center;
@@ -18,13 +20,13 @@
 .email, .password, .emailClick {
     width: 70%;
     height: 40px;
-    text-align: center;
+    text-align: start;
     border-top: none;
     border-left: none;
     border-right: none;
     border-bottom: 2px solid darkgrey;
     margin-bottom: 20px;
-    border-radius: 5px;
+    border-radius: 1px;
 }
 .span-error {
     background-color: red;
@@ -43,23 +45,37 @@
     border: none;
     font-weight: bold;
     border-radius: 5px;
-    background-color: rgb(134, 59, 255);
+    color: #fff;
+    background-image: url('https://colorlib.com/etc/lf/Login_v4/images/bg-01.jpg?fbclid=IwAR34YZqZZQZMPGeuAx6D7a9qGo7AMVMcY6oozt0efty39rgz0OGeQSxEVSg');
+    background-repeat: no-repeat;
 }
 .forgot-password {
     font-size: 15px;
     font-weight: bold;
     margin-bottom: 10px;
+    margin-right: 100px;
+    align-self: end;
 }
 
 @media screen and (max-width: 620px) {
     .signinContainer {
-        width: 100%;
+        width: 90%;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .forgot-password {
+        margin-right: 40px;
+        align-self: end;
     }
 
 }
 
 @media screen and (max-width: 320px) {
     .signinContainer {
-        width: 100%;
+        width: 90%;
     }
 }
