@@ -18,7 +18,7 @@ import "../styles/TaskDetails.css";
 const Task = ({ task }) => {
     // states
     const [modalIsOpen, setModalIsOpen] = useState(false);
-    const [autoplay, setAutoplay] = useState(false);
+    const [autoplay, setAutoPlay] = useState(false);
 
     // navigate e params
     const navigate = useNavigate();
@@ -36,11 +36,11 @@ const Task = ({ task }) => {
     }
 
     // função que apaga uma tarefa
-    const handleTaskDelete = async (taskId) => {
+    const handleTaskDelete =  (taskId) => {
         const id = taskId;
         const taskDoc = doc(db, 'tasks', id);
         try {
-            await setAutoplay(true);
+            setAutoPlay(true);
             setTimeout(() => deleteDoc(taskDoc), 3300);
         } catch (error) {
             console.log('error in handleTaskDelete : ', error);
